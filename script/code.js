@@ -1,17 +1,19 @@
 const btnDisplay = document.getElementById('calculate');
 
 btnDisplay.addEventListener('click', ()=>{
-    hours = document.getElementById('hours').value;
-    rates = document.getElementById('rate').value;
+    let hours = document.getElementById('hours').value;
+    let rates = document.getElementById('rate').value;
 
-    salary = hours * rates;
+    let salary = hours * rates;
 
     document.getElementById('output').innerHTML = 'R ' + salary;
 })
 
 function reset(){
-    hours = 0;
-    rates = 0;
-    salary = 0;
-    document.getElementById('output').innerHTML = 'R ' + salary;
+    // let hours = 0;
+    // let rates = 0;
+    // let salary = 0;
+    document.getElementById('hours').value = '';
+    document.getElementById('rate').value = '';
+    document.getElementById('output').innerText = 'R ' + salary;
 }
